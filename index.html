@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteo de los Grupos - Mas x Menos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sorteo de los Grupos</h1>
+        <p>Elegí tu número del 00 al 99 - ¡Premio Mayor $150.000!</p>
+    </header>
+
+    <main>
+        <div id="contenedor-numeros" class="grilla-numeros">
+            <!-- Los 100 números se van a generar acá con JavaScript -->
+        </div>
+    </main>
+
+    <!-- Modal para reservar (Ventana flotante) -->
+    <div id="modal-reserva" class="modal oculto">
+        <div class="contenido-modal">
+            <h2>Reservar Número <span id="numero-seleccionado">--</span></h2>
+            <form id="formulario-reserva">
+                <label for="nombre">Nombre y Apellido:</label>
+                <input type="text" id="nombre" required placeholder="Ej: Juan Pérez">
+                
+                <label for="telefono">WhatsApp / Teléfono:</label>
+                <input type="tel" id="telefono" required placeholder="Ej: 3764XXXXXX">
+                
+                <button type="submit" class="btn-confirmar">Reservar Número</button>
+                <button type="button" id="btn-cerrar" class="btn-cancelar">Cancelar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Firebase SDK (Las herramientas de Google) -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+    <!-- Nuestro código -->
+    <script src="app.js"></script>
+</body>
+</html>
